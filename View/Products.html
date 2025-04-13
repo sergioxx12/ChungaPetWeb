@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChungaPET - Productos</title>
+    <link rel="stylesheet" href="../Styles/Products.css">
+</head>
+<body background="../images/fondo.jpg">
+  
+    <header>
+        <div class="logo">
+        <a href="../Index.html">    
+            <img src="../images/logo.png" alt="ChungaPET Logo">
+        </a>
+        </div>
+        <nav class="icons">
+            <a href="../Index.html">
+                <img src="../iconos/home.png" alt="Inicio">
+            </a>
+            <a href="About_Us.html">
+          <img src="../iconos/us.png" alt="Usuarios">
+            </a>
+          <img src="../iconos/chat.png" alt="Chat">
+          <a href="Adoption.html">
+            <img src="../iconos/adopt.png" alt="Adoptar">
+          </a>
+        </nav>
+      </header>
+
+
+    <section class="Cover">
+        <img id="Cover-image" src="../images/productos-cover.jpg" alt="Productos para mascotas">
+        <div class="overlay">
+          <h2 id="Cover-title">PRODUCTOS</h2>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="category-filters">
+            <button class="category-btn active" data-filter="all">Todos</button>
+            <button class="category-btn" data-filter="perros">Perros</button>
+            <button class="category-btn" data-filter="gatos">Gatos</button>
+        </div>
+    </section>
+
+    <section class="products-container">
+        <!-- Productos para Perros -->
+        <div class="product-card" data-category="perros">
+            <div class="product-image">
+                <img src="../images/products/comida-perro.jpg" alt="Alimento Premium para Perros">
+            </div>
+            <div class="product-info">
+                <h3>Alimento Premium para Perros</h3>
+                <p class="product-description">Nutrición completa y balanceada para todas las etapas de vida.</p>
+                <p class="product-price">$450.00 MXN</p>
+                <a href="Product_detail.html?id=1&name=Alimento%20Premium%20para%20Perros&price=450" class="btn-view-product">Ver Producto</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="perros">
+            <div class="product-image">
+                <img src="../images/products/juguete-perro.jpg" alt="Juguete Interactivo para Perros">
+            </div>
+            <div class="product-info">
+                <h3>Juguete Interactivo para Perros</h3>
+                <p class="product-description">Estimula la inteligencia y mantiene entretenido a tu perro.</p>
+                <p class="product-price">$220.00 MXN</p>
+                <a href="Product_detail.html?id=2&name=Juguete%20Interactivo%20para%20Perros&price=220" class="btn-view-product">Ver Producto</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="perros">
+            <div class="product-image">
+                <img src="../images/products/cama-perro.jpg" alt="Cama Ortopédica para Perros">
+            </div>
+            <div class="product-info">
+                <h3>Cama Ortopédica para Perros</h3>
+                <p class="product-description">Ofrece soporte y comodidad para un descanso adecuado.</p>
+                <p class="product-price">$780.00 MXN</p>
+                <a href="Product_detail.html?id=3&name=Cama%20Ortopédica%20para%20Perros&price=780" class="btn-view-product">Ver Producto</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="perros">
+            <div class="product-image">
+                <img src="../images/products/collar-perro.jpg" alt="Collar Ajustable para Perros">
+            </div>
+            <div class="product-info">
+                <h3>Collar Ajustable para Perros</h3>
+                <p class="product-description">Duradero y cómodo, con placa identificadora incluida.</p>
+                <p class="product-price">$180.00 MXN</p>
+                <a href="Product_detail.html?id=4&name=Collar%20Ajustable%20para%20Perros&price=180" class="btn-view-product">Ver Producto</a>
+            </div>
+        </div>
+
+        <!-- Productos para Gatos -->
+        <div class="product-card" data-category="gatos">
+            <div class="product-image">
+                <img src="../images/products/comida-gato.jpg" alt="Alimento Premium para Gatos">
+            </div>
+            <div class="product-info">
+                <h3>Alimento Premium para Gatos</h3>
+                <p class="product-description">Formula especial para el cuidado del tracto urinario y pelaje brillante.</p>
+                <p class="product-price">$420.00 MXN</p>
+                <a href="Product_detail.html?id=5&name=Alimento%20Premium%20para%20Gatos&price=420" class="btn-view-product">Ver Producto</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="gatos">
+            <div class="product-image">
+                <img src="../images/products/rascador-gato.jpg" alt="Rascador para Gatos">
+            </div>
+            <div class="product-info">
+                <h3>Rascador para Gatos</h3>
+                <p class="product-description">Rascador con múltiples plataformas y juguetes colgantes.</p>
+                <p class="product-price">$990.00 MXN</p>
+                <a href="Product_detail.html?id=6&name=Rascador%20para%20Gatos&price=990" class="btn-view-product">Ver Producto</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="gatos">
+            <div class="product-image">
+                <img src="../images/products/arena-gato.jpg" alt="Arena para Gatos">
+            </div>
+            <div class="product-info">
+                <h3>Arena para Gatos</h3>
+                <p class="product-description">Arena aglomerante con control de olores, bolsa de 10kg.</p>
+                <p class="product-price">$290.00 MXN</p>
+                <a href="Product_detail.html?id=7&name=Arena%20para%20Gatos&price=290" class="btn-view-product">Ver Producto</a>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="gatos">
+            <div class="product-image">
+                <img src="../images/products/juguete-gato.jpg" alt="Set de Juguetes para Gatos">
+            </div>
+            <div class="product-info">
+                <h3>Set de Juguetes para Gatos</h3>
+                <p class="product-description">Conjunto de 5 juguetes para mantener activo a tu gato.</p>
+                <p class="product-price">$250.00 MXN</p>
+                <a href="Product_detail.html?id=8&name=Set%20de%20Juguetes%20para%20Gatos&price=250" class="btn-view-product">Ver Producto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 ChungaPET. Todos los derechos reservados.</p>
+        <img src="../images/footer.png" alt="Perrito en el footer">
+    </footer>
+
+    <script>
+        // Funcionalidad para los filtros de categorías
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover clase active de todos los botones
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Añadir clase active al botón clickeado
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    productCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

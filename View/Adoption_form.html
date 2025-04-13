@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChungaPET - Adopción</title>
+    <link rel="stylesheet" href="../Styles/Adoption_form.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<div id="modal-background" class="hidden"></div>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="../Index.html">    
+            <img src="../images/logo.png" alt="ChungaPET Logo">
+        </a>    </div>
+    <nav class="icons">
+        <a href="../Index.html">
+            <img src="../iconos/home.png" alt="Inicio">
+        </a>
+
+        <a href="About_Us.html">
+            <img src="../iconos/us.png" alt="Usuarios">
+        </a>        
+        <img src="../iconos/chat.png" alt="Chat">
+
+        <a href="Adoption.html">
+            <img src="../iconos/adopt.png" alt="Adoptar">
+        </a>
+    </nav>
+</header>
+
+<section class="Cover">
+    <img id="Cover-image" src="../images/Firma.jpg" alt="Imagen de carrusel">
+    <div class="overlay">
+        <h2 id="Cover-title">Completa tu Adopción</h2>
+    </div>
+</section>
+
+<main>
+    <section class="form-section">
+        <h1>Formulario de Adopción</h1>
+        <form id="adoptionForm" class="form">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" placeholder="Nombre completo" >
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="Correo electrónico" >
+
+            <label for="pet">Nombre de la mascota</label>
+            <input type="text" id="pet" placeholder="Nombre de la mascota" >
+
+            <label for="message">¿Por qué quieres adoptar?</label>
+            <textarea id="message" placeholder="¿Por qué quieres adoptar?" ></textarea>
+
+            <button type="submit">Enviar solicitud</button>
+
+            <div class="form-messages">
+                <div id="warning" class="hidden">
+                    <img src="../images/gato-alerta.png" alt="Alerta">
+                    Por favor llena todos los campos.
+                </div>
+                
+                <div id="loading" class="hidden">
+                    <img src="../images/loading.gif" alt="Cargando..." class="spinner">
+                    <p>Enviando solicitud...</p>
+                </div>
+                
+                <div id="success" class="hidden">
+                    <img src="../images/success.png" alt="Exito gatito">
+                    <p>¡Tu solicitud ha sido enviada exitosamente!</p>
+                  </div>
+                                  
+                <div id="error" class="hidden">
+                    <img src="../images/gato-error.png" alt="Error gatito">
+                    <p>OCURRIÓ UN PROBLEMA<br>INTÉNTALO MÁS TARDE</p>
+                </div>
+                
+                
+            </div>
+        </form>
+    </section>
+</main>
+
+<script src="../Scripts/Adoption_form.js"></script>
+
+
+
+<footer class="footer">
+    <p>© 2025 ChungaPET. Todos los derechos reservados.</p>
+    <img src="../images/footer.png" alt="Perrito en el footer">
+</footer>
+
+<div id="modal-background" class="hidden"></div>
+
+</body>
+</html>

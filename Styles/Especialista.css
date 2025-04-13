@@ -1,0 +1,489 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('../images/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: #3a7ce1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: white;
+}
+  
+.logo img {
+    height: 50px;
+    object-fit: contain;
+}
+  
+.icons img {
+    width: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #3285FF;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+    border-top: 2px solid #1f5ec7;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer img {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    height: 70px;
+}
+
+/* Sección de Especialistas */
+.especialistas-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex-grow: 1;
+}
+
+.especialistas-container h1 {
+    color: #3a7ce1;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.especialistas-intro {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Filtros */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: #f5f5f5;
+    border: 2px solid #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #666;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+    background-color: #3a7ce1;
+    border-color: #3a7ce1;
+    color: white;
+}
+
+/* Grid de Especialistas */
+.especialistas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 25px;
+}
+
+.especialista-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.especialista-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.especialista-header {
+    position: relative;
+}
+
+.especialista-img {
+    height: 180px;
+    overflow: hidden;
+}
+
+.especialista-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.especialista-card:hover .especialista-img img {
+    transform: scale(1.05);
+}
+
+.especialista-insignia {
+    position: absolute;
+    right: 15px;
+    bottom: -20px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #fff;
+    z-index: 1;
+}
+
+.especialista-insignia img {
+    width: 30px;
+    height: 30px;
+}
+
+.especialista-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.especialista-info h3 {
+    margin: 0 0 5px 0;
+    color: #3a7ce1;
+    font-size: 1.3rem;
+}
+
+.especialidad {
+    font-weight: bold;
+    margin: 0 0 15px;
+    color: #ff6b6b;
+    font-size: 0.95rem;
+}
+
+.especialista-descripcion {
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.especialista-descripcion p {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.especialista-contacto {
+    margin-top: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.horario {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.agendar-btn {
+    background-color: #3a7ce1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.agendar-btn:hover {
+    background-color: #2a5db0;
+}
+
+/* Colores por especialidad */
+.especialista-card[data-tipo="veterinarios"] .especialista-insignia {
+    background-color: #e1f5fe;
+}
+
+.especialista-card[data-tipo="entrenadores"] .especialista-insignia {
+    background-color: #f8bbd0;
+}
+
+.especialista-card[data-tipo="cuidadores"] .especialista-insignia {
+    background-color: #dcedc8;
+}
+
+.especialista-card[data-tipo="nutricion"] .especialista-insignia {
+    background-color: #fff9c4;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .especialistas-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .especialistas-container {
+        margin: 20px auto;
+    }
+    
+    .especialistas-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 15px;
+    }
+    
+    .especialista-img {
+        height: 160px;
+    }
+    
+    .especialista-info {
+        padding: 15px;
+    }
+    
+    .especialista-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .especialistas-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .especialistas-intro {
+        font-size: 1rem;
+    }
+    
+    .especialistas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 80%;
+        margin-bottom: 5px;
+    }
+    
+    .especialista-insignia {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        bottom: -15px;
+    }
+
+    .especialista-insignia img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .agendar-btn {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .horario {
+        font-size: 0.8rem;
+    }
+}
+
+/* Efectos adicionales */
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.agendar-btn:active {
+    animation: pulseButton 0.3s ease;
+}
+
+/* Estado hover para las tarjetas */
+.especialista-card:hover .especialista-insignia {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.especialista-card:nth-child(even) {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.especialista-card:nth-child(odd) {
+    animation: fadeIn 0.7s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para el estado activo del botón de filtro */
+.filter-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(58, 124, 225, 0.4);
+}
+
+/* Mejoras en accesibilidad */
+.agendar-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(58, 124, 225, 0.5);
+}
+
+
+/* Agregar estos estilos al archivo Especialista.css */
+
+/* Fondo modal */
+#modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+/* Contenedor de notificaciones */
+.notification-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Estilos base para las notificaciones */
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 300px;
+    font-weight: bold;
+    pointer-events: auto;
+    z-index: 1000;
+}
+
+/* Notificación de cargando */
+#loading {
+    background-color: white;
+    color: #333;
+}
+
+#loading .spinner {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+#loading p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Notificación de éxito */
+#success {
+    background-color: #2ecc71;
+    color: #fff;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 18px;
+}
+
+#success img {
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+/* Notificación de error */
+#error {
+    background-color: #e74c3c;
+    color: #fff;
+    font-family: 'Arial Black', sans-serif;
+}
+
+#error img {
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+#error p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none !important;
+}
+
+/* Animación para notificaciones */
+@keyframes fadeInNotification {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.notification:not(.hidden) {
+    animation: fadeInNotification 0.3s ease-out;
+}

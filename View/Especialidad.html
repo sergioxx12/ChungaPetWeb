@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChungaPET - Especialistas</title>
+    <link rel="stylesheet" href="../Styles/Especialista.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div id="modal-background" class="hidden"></div>
+
+
+<header>
+    <div class="logo">
+        <a href="../Index.html">    
+            <img src="../images/logo.png" alt="ChungaPET Logo">
+        </a>    </div>
+    <nav class="icons">
+        <a href="../Index.html">
+            <img src="../iconos/home.png" alt="Inicio">
+        </a>
+
+        <a href="About_Us.html">
+            <img src="../iconos/us.png" alt="Usuarios">
+        </a>        
+        <img src="../iconos/chat.png" alt="Chat">
+
+        <a href="Adoption.html">
+            <img src="../iconos/adopt.png" alt="Adoptar">
+        </a>
+    </nav>
+</header>
+
+<main class="especialistas-container">
+    <h1>Nuestro Equipo de Especialistas</h1>
+    <p class="especialistas-intro">Profesionales comprometidos con el bienestar de todas las mascotas</p>
+    
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="veterinarios">Veterinarios</button>
+        <button class="filter-btn" data-filter="entrenadores">Entrenadores</button>
+        <button class="filter-btn" data-filter="cuidadores">Cuidadores</button>
+        <button class="filter-btn" data-filter="nutricion">Nutricionistas</button>
+    </div>
+
+    <div class="especialistas-grid">
+        <!-- Especialista 1 -->
+        <div class="especialista-card" data-tipo="veterinarios">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista1.jpg" alt="Dra. Carmen Vásquez">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/veterinario.png" alt="Veterinario">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Dra. Carmen Vásquez</h3>
+                <p class="especialidad">Medicina General y Cirugía</p>
+                <div class="especialista-descripcion">
+                    <p>Especialista en cirugía de pequeñas especies con más de 10 años de experiencia en medicina veterinaria.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Lunes a Viernes, 9:00 - 17:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 2 -->
+        <div class="especialista-card" data-tipo="entrenadores">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista2.jpg" alt="Luis Mendoza">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/entrenador.png" alt="Entrenador">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Luis Mendoza</h3>
+                <p class="especialidad">Entrenamiento Canino</p>
+                <div class="especialista-descripcion">
+                    <p>Experto en comportamiento canino, especializado en técnicas de refuerzo positivo y solución de problemas conductuales.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Martes a Sábado, 10:00 - 18:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 3 -->
+        <div class="especialista-card" data-tipo="nutricion">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista3.jpg" alt="Ana Martínez">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/nutricion.png" alt="Nutricionista">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Ana Martínez</h3>
+                <p class="especialidad">Nutrición Animal</p>
+                <div class="especialista-descripcion">
+                    <p>Nutricionista especializada en dietas personalizadas para mascotas con necesidades especiales o condiciones médicas.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Lunes, Miércoles y Viernes, 11:00 - 19:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 4 -->
+        <div class="especialista-card" data-tipo="cuidadores">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista4.jpg" alt="Roberto Sánchez">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/cuidador.png" alt="Cuidador">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Roberto Sánchez</h3>
+                <p class="especialidad">Cuidados a Domicilio</p>
+                <div class="especialista-descripcion">
+                    <p>Cuidador certificado que ofrece servicios de paseo, alimentación y atención para mascotas en el hogar.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Lunes a Domingo, 8:00 - 20:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 5 -->
+        <div class="especialista-card" data-tipo="veterinarios">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista5.jpg" alt="Dr. Felipe Torres">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/veterinario.png" alt="Veterinario">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Dr. Felipe Torres</h3>
+                <p class="especialidad">Dermatología Veterinaria</p>
+                <div class="especialista-descripcion">
+                    <p>Especialista en problemas dermatológicos y alergias en perros y gatos. Certificado en dermatología veterinaria.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Lunes, Miércoles y Jueves, 9:00 - 16:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 6 -->
+        <div class="especialista-card" data-tipo="entrenadores">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista6.jpg" alt="Sofía Ramírez">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/entrenador.png" alt="Entrenador">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Sofía Ramírez</h3>
+                <p class="especialidad">Adiestramiento Felino</p>
+                <div class="especialista-descripcion">
+                    <p>Especializada en comportamiento y entrenamiento de gatos. Experta en resolver problemas de conducta felina.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Martes, Jueves y Sábado, 10:00 - 17:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 7 -->
+        <div class="especialista-card" data-tipo="veterinarios">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista7.jpg" alt="Dr. Alejandro Guzmán">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/veterinario.png" alt="Veterinario">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Dr. Alejandro Guzmán</h3>
+                <p class="especialidad">Cardiología Veterinaria</p>
+                <div class="especialista-descripcion">
+                    <p>Especialista en enfermedades cardíacas en mascotas. Cuenta con equipo de última generación para diagnósticos precisos.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Martes y Jueves, 9:00 - 18:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 8 -->
+        <div class="especialista-card" data-tipo="nutricion">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista8.jpg" alt="Marta Jiménez">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/nutricion.png" alt="Nutricionista">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Marta Jiménez</h3>
+                <p class="especialidad">Nutrición para Especies Exóticas</p>
+                <div class="especialista-descripcion">
+                    <p>Especialista en dietas para mascotas exóticas como reptiles, aves y pequeños mamíferos.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Lunes, Miércoles y Viernes, 10:00 - 16:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 9 -->
+        <div class="especialista-card" data-tipo="cuidadores">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista9.jpg" alt="Daniel López">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/cuidador.png" alt="Cuidador">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Daniel López</h3>
+                <p class="especialidad">Peluquería Canina y Felina</p>
+                <div class="especialista-descripcion">
+                    <p>Estilista profesional con 8 años de experiencia en corte, baño y cuidado estético para todos los tipos de pelaje.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Martes a Sábado, 9:00 - 19:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 10 -->
+        <div class="especialista-card" data-tipo="veterinarios">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista10.jpg" alt="Dra. Laura Ortiz">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/veterinario.png" alt="Veterinario">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Dra. Laura Ortiz</h3>
+                <p class="especialidad">Medicina Preventiva</p>
+                <div class="especialista-descripcion">
+                    <p>Dedicada a la prevención de enfermedades y promoción de la salud a través de revisiones regulares y planes de vacunación.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Lunes a Viernes, 8:00 - 16:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 11 -->
+        <div class="especialista-card" data-tipo="entrenadores">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista11.jpg" alt="Miguel Hernández">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/entrenador.png" alt="Entrenador">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Miguel Hernández</h3>
+                <p class="especialidad">Adiestramiento para Competición</p>
+                <div class="especialista-descripcion">
+                    <p>Entrenador especializado en preparar perros para competiciones de obediencia, agilidad y deporte canino.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Lunes, Miércoles y Sábado, 7:00 - 15:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 12 -->
+        <div class="especialista-card" data-tipo="cuidadores">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista12.jpg" alt="Elena Castro">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/cuidador.png" alt="Cuidador">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Elena Castro</h3>
+                <p class="especialidad">Fisioterapia Animal</p>
+                <div class="especialista-descripcion">
+                    <p>Fisioterapeuta especializada en rehabilitación de mascotas con problemas musculares, articulares o post-operatorios.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Lunes a Viernes, 10:00 - 18:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 13 -->
+        <div class="especialista-card" data-tipo="nutricion">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista13.jpg" alt="Pablo Díaz">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/nutricion.png" alt="Nutricionista">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Pablo Díaz</h3>
+                <p class="especialidad">Dietas Naturales y Orgánicas</p>
+                <div class="especialista-descripcion">
+                    <p>Experto en alimentación natural para mascotas, especializado en dietas BARF y alimentación orgánica.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Martes, Jueves y Sábado, 9:00 - 17:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 14 -->
+        <div class="especialista-card" data-tipo="veterinarios">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista14.jpg" alt="Dr. Javier Ruiz">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/veterinario.png" alt="Veterinario">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>Dr. Javier Ruiz</h3>
+                <p class="especialidad">Oftalmología Veterinaria</p>
+                <div class="especialista-descripcion">
+                    <p>Especialista en diagnóstico y tratamiento de enfermedades oculares en perros, gatos y otras mascotas.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Lunes, Miércoles y Viernes, 8:30 - 15:30
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Especialista 15 -->
+        <div class="especialista-card" data-tipo="cuidadores">
+            <div class="especialista-header">
+                <div class="especialista-img">
+                    <img src="../images/especialista15.jpg" alt="María Fernández">
+                </div>
+                <div class="especialista-insignia">
+                    <img src="../iconos/cuidador.png" alt="Cuidador">
+                </div>
+            </div>
+            <div class="especialista-info">
+                <h3>María Fernández</h3>
+                <p class="especialidad">Hospedaje y Guardería</p>
+                <div class="especialista-descripcion">
+                    <p>Encargada de nuestro servicio de guardería y hospedaje para mascotas, con instalaciones adaptadas para cada especie.</p>
+                </div>
+                <div class="especialista-contacto">
+                    <div class="horario">
+                        <strong>Horario:</strong> Todos los días, 7:00 - 21:00
+                    </div>
+                    <button class="agendar-btn">Agendar Cita</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="notification-container">
+    <div id="loading" class="notification hidden">
+        <img src="../images/loading.gif" alt="Cargando..." class="spinner">
+        <p>Procesando tu solicitud...</p>
+    </div>
+    
+    <div id="success" class="notification hidden">
+        <img src="../images/success.png" alt="Éxito">
+        <p>¡Tu cita ha sido agendada exitosamente!</p>
+    </div>
+    
+    <div id="error" class="notification hidden">
+        <img src="../images/gato-error.png" alt="Error">
+        <p>OCURRIÓ UN PROBLEMA<br>INTÉNTALO MÁS TARDE</p>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <p>© 2025 ChungaPET. Todos los derechos reservados.</p>
+    <img src="../images/footer.png" alt="Perrito en el footer">
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const especialistaCards = document.querySelectorAll('.especialista-card');
+        const agendarButtons = document.querySelectorAll('.agendar-btn');
+        const loading = document.getElementById('loading');
+        const success = document.getElementById('success');
+        const error = document.getElementById('error');
+        const modalBackground = document.getElementById('modal-background');
+
+        // Filtrado de especialistas (código existente)
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Quitar clase activa de todos los botones
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Agregar clase activa al botón seleccionado
+                this.classList.add('active');
+                const filterValue = this.getAttribute('data-filter');
+                // Mostrar/ocultar tarjetas según el filtro
+                especialistaCards.forEach(card => {
+                    if (filterValue === 'todos' || card.getAttribute('data-tipo') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Funciones para manejar notificaciones
+        function showNotification(notificationElement) {
+            // Ocultar todas las notificaciones primero
+            hideAllNotifications();
+            
+            // Mostrar el fondo modal y la notificación específica
+            modalBackground.classList.remove('hidden');
+            notificationElement.classList.remove('hidden');
+        }
+
+        function hideAllNotifications() {
+            loading.classList.add('hidden');
+            success.classList.add('hidden');
+            error.classList.add('hidden');
+            modalBackground.classList.add('hidden');
+        }
+
+        // Funcionamiento de botones de agendar (modificado)
+        agendarButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const especialistaNombre = this.closest('.especialista-card').querySelector('h3').textContent;
+                
+                // Mostrar notificación de cargando
+                showNotification(loading);
+                
+                // Simular procesamiento (2 segundos)
+                setTimeout(() => {
+                    // Ocultar cargando
+                    loading.classList.add('hidden');
+                    
+                    // Decidir aleatoriamente si mostrar éxito o error (para demostración)
+                    // En producción, esto dependería del resultado real de la operación
+                    const isSuccess = Math.random() > 0.2; // 80% de probabilidad de éxito
+                    
+                    if (isSuccess) {
+                        // Mostrar notificación de éxito
+                        showNotification(success);
+                    } else {
+                        // Mostrar notificación de error
+                        showNotification(error);
+                    }
+                    
+                    // Ocultar la notificación después de 3 segundos
+                    setTimeout(() => {
+                        hideAllNotifications();
+                    }, 3000);
+                }, 2000);
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

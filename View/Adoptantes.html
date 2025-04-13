@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChungaPET - Adoptantes</title>
+    <link rel="stylesheet" href="../Styles/Adoptantes.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="../Index.html">    
+            <img src="../images/logo.png" alt="ChungaPET Logo">
+        </a>    </div>
+    <nav class="icons">
+        <a href="../Index.html">
+            <img src="../iconos/home.png" alt="Inicio">
+        </a>
+
+        <a href="About_Us.html">
+            <img src="../iconos/us.png" alt="Usuarios">
+        </a>        
+        <img src="../iconos/chat.png" alt="Chat">
+
+        <a href="Adoption.html">
+            <img src="../iconos/adopt.png" alt="Adoptar">
+        </a>
+    </nav>
+</header>
+
+<main class="adoptantes-container">
+    <h1>Nuestros Adoptantes Felices</h1>
+    <p class="adoptantes-intro">Conoce a las personas que han dado un hogar a nuestras mascotas</p>
+    
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="perros">Perros</button>
+        <button class="filter-btn" data-filter="gatos">Gatos</button>
+        <button class="filter-btn" data-filter="otros">Otros</button>
+    </div>
+
+    <div class="adoptantes-grid">
+        <!-- Adoptante 1 -->
+        <div class="adoptante-card" data-tipo="perros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante1.jpg" alt="María Rodríguez y Toby">
+            </div>
+            <div class="adoptante-info">
+                <h3>María Rodríguez</h3>
+                <p class="mascota-info">Adoptó a: <span>Toby</span></p>
+                <p class="adoptante-testimonio">"Toby ha traído tanta alegría a nuestro hogar. La adopción fue la mejor decisión que tomamos."</p>
+                <div class="fecha-adopcion">Febrero 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 2 -->
+        <div class="adoptante-card" data-tipo="gatos">
+            <div class="adoptante-img">
+                <img src="../images/adoptante2.jpg" alt="Carlos García y Luna">
+            </div>
+            <div class="adoptante-info">
+                <h3>Carlos García</h3>
+                <p class="mascota-info">Adoptó a: <span>Luna</span></p>
+                <p class="adoptante-testimonio">"Luna llegó a mi vida cuando más la necesitaba. Es increíble cómo una gatita puede cambiar todo."</p>
+                <div class="fecha-adopcion">Enero 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 3 -->
+        <div class="adoptante-card" data-tipo="perros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante3.jpg" alt="Ana Martínez y Rocky">
+            </div>
+            <div class="adoptante-info">
+                <h3>Ana Martínez</h3>
+                <p class="mascota-info">Adoptó a: <span>Rocky</span></p>
+                <p class="adoptante-testimonio">"Rocky era tímido al principio, pero ahora es el alma de la casa. Gracias por ayudarnos a encontrarnos."</p>
+                <div class="fecha-adopcion">Marzo 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 4 -->
+        <div class="adoptante-card" data-tipo="otros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante4.jpg" alt="Pedro López y Paco">
+            </div>
+            <div class="adoptante-info">
+                <h3>Pedro López</h3>
+                <p class="mascota-info">Adoptó a: <span>Paco</span></p>
+                <p class="adoptante-testimonio">"Nunca pensé que un conejo pudiera ser tan cariñoso y lleno de personalidad. Paco es especial."</p>
+                <div class="fecha-adopcion">Diciembre 2024</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 5 -->
+        <div class="adoptante-card" data-tipo="gatos">
+            <div class="adoptante-img">
+                <img src="../images/adoptante5.jpg" alt="Laura Sánchez y Mia">
+            </div>
+            <div class="adoptante-info">
+                <h3>Laura Sánchez</h3>
+                <p class="mascota-info">Adoptó a: <span>Mia</span></p>
+                <p class="adoptante-testimonio">"Mia era una gatita rescatada de la calle. Ahora es la reina de la casa y nos despierta cada mañana con ronroneos."</p>
+                <div class="fecha-adopcion">Noviembre 2024</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 6 -->
+        <div class="adoptante-card" data-tipo="perros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante6.jpg" alt="David Hernández y Max">
+            </div>
+            <div class="adoptante-info">
+                <h3>David Hernández</h3>
+                <p class="mascota-info">Adoptó a: <span>Max</span></p>
+                <p class="adoptante-testimonio">"Max me acompaña en mis caminatas diarias. Ha sido un gran compañero en mi recuperación física."</p>
+                <div class="fecha-adopcion">Febrero 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 7 -->
+        <div class="adoptante-card" data-tipo="otros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante7.jpg" alt="Sofía Ramírez y Pepe">
+            </div>
+            <div class="adoptante-info">
+                <h3>Sofía Ramírez</h3>
+                <p class="mascota-info">Adoptó a: <span>Pepe</span></p>
+                <p class="adoptante-testimonio">"Mi hámster Pepe es pequeño pero lleno de energía. Ha sido una excelente primera mascota para nuestra familia."</p>
+                <div class="fecha-adopcion">Enero 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 8 -->
+        <div class="adoptante-card" data-tipo="gatos">
+            <div class="adoptante-img">
+                <img src="../images/adoptante8.jpg" alt="Miguel Torres y Simba">
+            </div>
+            <div class="adoptante-info">
+                <h3>Miguel Torres</h3>
+                <p class="mascota-info">Adoptó a: <span>Simba</span></p>
+                <p class="adoptante-testimonio">"Simba es juguetón y cariñoso. Siempre me recibe en la puerta cuando llego del trabajo."</p>
+                <div class="fecha-adopcion">Marzo 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 9 -->
+        <div class="adoptante-card" data-tipo="perros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante9.jpg" alt="Carmen Vega y Lola">
+            </div>
+            <div class="adoptante-info">
+                <h3>Carmen Vega</h3>
+                <p class="mascota-info">Adoptó a: <span>Lola</span></p>
+                <p class="adoptante-testimonio">"Lola ha sido la compañera perfecta para mis días de teletrabajo. Es tranquila y adorable."</p>
+                <div class="fecha-adopcion">Diciembre 2024</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 10 -->
+        <div class="adoptante-card" data-tipo="perros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante10.jpg" alt="Juan Mendoza y Bolt">
+            </div>
+            <div class="adoptante-info">
+                <h3>Juan Mendoza</h3>
+                <p class="mascota-info">Adoptó a: <span>Bolt</span></p>
+                <p class="adoptante-testimonio">"Bolt es un perro muy activo que me ha motivado a hacer más ejercicio. Nos encanta ir al parque juntos."</p>
+                <div class="fecha-adopcion">Febrero 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 11 -->
+        <div class="adoptante-card" data-tipo="gatos">
+            <div class="adoptante-img">
+                <img src="../images/adoptante11.jpg" alt="Elena Castro y Nina">
+            </div>
+            <div class="adoptante-info">
+                <h3>Elena Castro</h3>
+                <p class="mascota-info">Adoptó a: <span>Nina</span></p>
+                <p class="adoptante-testimonio">"Nina es una gatita muy cariñosa. Se lleva de maravilla con mis otros gatos y ha completado nuestra familia."</p>
+                <div class="fecha-adopcion">Enero 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 12 -->
+        <div class="adoptante-card" data-tipo="otros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante12.jpg" alt="Roberto Díaz y Coco">
+            </div>
+            <div class="adoptante-info">
+                <h3>Roberto Díaz</h3>
+                <p class="mascota-info">Adoptó a: <span>Coco</span></p>
+                <p class="adoptante-testimonio">"Mi loro Coco es inteligente y divertido. Ya ha aprendido varias palabras y siempre nos hace reír."</p>
+                <div class="fecha-adopcion">Marzo 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 13 -->
+        <div class="adoptante-card" data-tipo="perros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante13.jpg" alt="Lucía Ortega y Bruno">
+            </div>
+            <div class="adoptante-info">
+                <h3>Lucía Ortega</h3>
+                <p class="mascota-info">Adoptó a: <span>Bruno</span></p>
+                <p class="adoptante-testimonio">"Bruno es un perro muy leal. Se ha convertido en el guardián de nuestros hijos y juega mucho con ellos."</p>
+                <div class="fecha-adopcion">Diciembre 2024</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 14 -->
+        <div class="adoptante-card" data-tipo="gatos">
+            <div class="adoptante-img">
+                <img src="../images/adoptante14.jpg" alt="Javier Reyes y Nala">
+            </div>
+            <div class="adoptante-info">
+                <h3>Javier Reyes</h3>
+                <p class="mascota-info">Adoptó a: <span>Nala</span></p>
+                <p class="adoptante-testimonio">"Nala es una gatita muy tranquila que le encanta dormir en mi regazo mientras trabajo."</p>
+                <div class="fecha-adopcion">Febrero 2025</div>
+            </div>
+        </div>
+
+        <!-- Adoptante 15 -->
+        <div class="adoptante-card" data-tipo="perros">
+            <div class="adoptante-img">
+                <img src="../images/adoptante15.jpg" alt="Isabel Flores y Rex">
+            </div>
+            <div class="adoptante-info">
+                <h3>Isabel Flores</h3>
+                <p class="mascota-info">Adoptó a: <span>Rex</span></p>
+                <p class="adoptante-testimonio">"Rex era un perro mayor cuando lo adoptamos, pero su energía y amor nos sorprenden cada día."</p>
+                <div class="fecha-adopcion">Enero 2025</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>© 2025 ChungaPET. Todos los derechos reservados.</p>
+    <img src="../images/footer.png" alt="Perrito en el footer">
+</footer>
+
+<script>
+    // Filtrado de adoptantes
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const adoptanteCards = document.querySelectorAll('.adoptante-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Quitar clase activa de todos los botones
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Agregar clase activa al botón seleccionado
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter');
+
+                // Mostrar/ocultar tarjetas según el filtro
+                adoptanteCards.forEach(card => {
+                    if (filterValue === 'todos' || card.getAttribute('data-tipo') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('../images/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: #3a7ce1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: white;
+}
+  
+.logo img {
+    height: 50px;
+    object-fit: contain;
+}
+  
+.icons img {
+    width: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #3285FF;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 18px;
+    border-top: 2px solid #1f5ec7;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer img {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    height: 70px;
+}
+
+/* Sección de Adoptantes */
+.adoptantes-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex-grow: 1;
+}
+
+.adoptantes-container h1 {
+    color: #3a7ce1;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.adoptantes-intro {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Filtros */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: #f5f5f5;
+    border: 2px solid #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #666;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+    background-color: #3a7ce1;
+    border-color: #3a7ce1;
+    color: white;
+}
+
+/* Grid de Adoptantes */
+.adoptantes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.adoptante-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.adoptante-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.adoptante-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.adoptante-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.adoptante-card:hover .adoptante-img img {
+    transform: scale(1.05);
+}
+
+.adoptante-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.adoptante-info h3 {
+    margin: 0 0 5px 0;
+    color: #3a7ce1;
+    font-size: 1.3rem;
+}
+
+.mascota-info {
+    font-weight: bold;
+    margin: 5px 0 10px;
+    color: #666;
+}
+
+.mascota-info span {
+    color: #ff6b6b;
+}
+
+.adoptante-testimonio {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.fecha-adopcion {
+    color: #999;
+    font-size: 0.9rem;
+    text-align: right;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .adoptantes-container {
+        margin: 20px auto;
+    }
+    
+    .adoptantes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 15px;
+    }
+    
+    .adoptante-img {
+        height: 180px;
+    }
+    
+    .adoptante-info {
+        padding: 15px;
+    }
+    
+    .adoptante-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .adoptantes-container h1 {
+        font-size: 1.8rem;
+    }
+    
+    .adoptantes-intro {
+        font-size: 1rem;
+    }
+    
+    .adoptantes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 80%;
+        margin-bottom: 5px;
+    }
+}

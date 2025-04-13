@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChungaPET</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body background="images/fondo.jpg">
+
+  <header>
+    <div class="logo">
+      <a href="Index.html">
+        <img src="images/logo.png" alt="ChungaPET Logo">
+      </a>
+    </div>
+    <nav class="icons">
+      <a href="Index.html">
+        <img src="iconos/home.png" alt="Inicio">
+      </a>
+
+      <a href="./View/About_Us.html">
+        <img src="iconos/us.png" alt="Usuarios">
+      </a>      
+      
+      <img src="iconos/chat.png" alt="Chat">
+
+      <a href="./View/Adoption.html">
+        <img src="iconos/adopt.png" alt="Adoptar">
+      </a>
+    </nav>
+  </header>
+
+  <section class="carousel">
+    <img id="carousel-image" src="images/Perro1.jpg" alt="Imagen de carrusel">
+    <div class="overlay">
+      <h2 id="carousel-title">CONFIANZA</h2>
+      <p id="carousel-text">Garantizamos la mayor transparencia y amabilidad al encontrar a tu mejor amigo</p>
+    </div>
+  </section>
+
+  <section class="servicios">
+    <h2>SERVICIOS</h2>
+    <div class="cards">
+      <div class="card">
+        <a href="./View/Adoption.html">
+          <img src="images/adoptar.png" alt="Adoptar">
+        </a>
+        <p>ADOPTAR</p>
+      </div>
+      <div class="card">
+        <a href="./View/Adoptantes.html">
+          <img src="images/adoptante.png" alt="Adoptantes">
+        </a>
+        <p>ADOPTANTES</p>
+      </div>
+      <div class="card">
+        <a href="./View/Products.html">
+          <img src="images/insumos.png" alt="Insumos">
+        </a>
+        <p>INSUMOS</p>
+        
+      </div>
+      <div class="card">
+        <a href="./View/Especialidad.html">
+          <img src="images/especialistas.png" alt="Especialistas">
+        </a>
+          <p>ESPECIALISTAS</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="comentarios">
+    <h2>COMENTARIOS</h2>
+    <div class="testimonios">
+      <div class="testimonio">
+        <div class="avatar">
+          <img src="images/jhoel.jpg" alt="Jhoel D'Mai">
+        </div>
+        <div class="comentario-content">
+          <div class="quote-marks opening">"</div>
+          <p>Adopté a mi perrito en ChungaPET y fue la mejor decisión. Gracias por su amor y dedicación.</p>
+          <div class="quote-marks closing">"</div>
+          <p class="autor">-Jhoel D'Mai</p>
+        </div>
+      </div>
+      
+      <div class="testimonio">
+        <div class="avatar">
+          <img src="images/prima.jpg" alt="Prima De Chino">
+        </div>
+        <div class="comentario-content">
+          <div class="quote-marks opening">"</div>
+          <p>Profesionales y con mucho corazón. ¡Recomiendo totalmente!</p>
+          <div class="quote-marks closing">"</div>
+          <p class="autor">-Prima De Chino</p>
+        </div>
+      </div>
+      
+      <div class="testimonio">
+        <div class="avatar">
+          <img src="images/ana.jpg" alt="Ana Malkova">
+        </div>
+        <div class="comentario-content">
+          <div class="quote-marks opening">"</div>
+          <p>Gracias a ChungaPET ahora Luna tiene una familia que la ama.</p>
+          <div class="quote-marks closing">"</div>
+          <p class="autor">-Ana Malkova</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+<!-- CONTENEDOR GENERAL -->
+<section class="colaboradores-section">
+  <h2 class="titulo-seccion">Colaboradores</h2>
+  <div class="colaboradores-container">
+    <div class="colaborador">
+      <div class="colaborador-foto">
+        <img src="images/colaborador1.jpg" alt="Colaborador 1">
+      </div>
+      <p>Experiencia con los animales de 4 patas, amable y disponible para cuando la necesites.</p>
+    </div>
+    <div class="colaborador">
+      <div class="colaborador-foto">
+        <img src="images/colaborador2.jpg" alt="Colaborador 2">
+      </div>
+      <p>Gran trayectoria y con su visión siempre hacia el futuro lo hace uno de los más completos actualmente.</p>
+    </div>
+    <div class="colaborador">
+      <div class="colaborador-foto">
+        <img src="images/colaborador3.jpg" alt="Colaborador 3">
+      </div>
+      <p>Joven y audaz, a pesar de su edad es un gran prospecto con el que nos alegra mucho poder contar siempre.</p>
+    </div>
+  </div>
+</section>
+
+
+
+  
+<!-- Sección de Concientización -->
+<section class="concientizacion">
+  <div class="contenido-concientizacion">
+    <img src="images/Perro1.jpg" alt="Perros comiendo en la calle">
+    <div class="texto-concientizacion">
+      Cada día, aumenta el número de mascotas que son abandonadas o maltratadas. Esta realidad triste refleja la falta de conciencia y responsabilidad que aún persiste en nuestra sociedad. Muchos animales inocentes terminan en las calles o en condiciones precarias, esperando una segunda oportunidad que, a veces, nunca llega.
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 ChungaPET. Todos los derechos reservados.</p>
+  <img src="images/footer.png" alt="Perrito en el footer">
+</footer>
+
+  
+  
+
+  <script>
+    const carouselData = [
+      {
+        image: 'images/Perro1.jpg',
+        title: 'CONFIANZA',
+        text: 'Garantizamos la mayor transparencia y amabilidad al encontrar a tu mejor amigo'
+      },
+      {
+        image: 'images/Perro2.jpg',
+        title: 'COMPAÑÍA',
+        text: 'Un nuevo mejor amigo está esperándote para hacerte sonreír todos los días'
+      },
+      {
+        image: 'images/Perro3.jpg',
+        title: 'RESPONSABILIDAD',
+        text: 'Adoptar es un acto de amor, compromiso y respeto por la vida animal'
+      }
+    ];
+
+    let index = 0;
+
+    const imgElement = document.getElementById('carousel-image');
+    const titleElement = document.getElementById('carousel-title');
+    const textElement = document.getElementById('carousel-text');
+
+    setInterval(() => {
+      index = (index + 1) % carouselData.length;
+      const data = carouselData[index];
+      imgElement.src = data.image;
+      titleElement.textContent = data.title;
+      textElement.textContent = data.text;
+    }, 10000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChungaPET - Detalle de Producto</title>
+    <link rel="stylesheet" href="../Styles/Product_detail.css">
+</head>
+<body background="../images/fondo.jpg">
+
+    <header>
+        <div class="logo">
+            <a href="../Index.html">    
+                <img src="../images/logo.png" alt="ChungaPET Logo">
+            </a>        </div>
+        <nav class="icons">
+            <a href="../Index.html">
+                <img src="../iconos/home.png" alt="Inicio">
+            </a>
+            <a href="About_Us.html">
+          <img src="../iconos/us.png" alt="Usuarios">
+            </a>
+          <img src="../iconos/chat.png" alt="Chat">
+          <a href="Adoption.html">
+            <img src="../iconos/adopt.png" alt="Adoptar">
+          </a>
+        </nav>
+      </header>
+ 
+
+
+    <div class="back-to-products">
+        <a href="Products.html">← Volver a Productos</a>
+    </div>
+
+    <section class="product-detail-container">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img id="product-main-image" src="../images/products/juguete-perro.jpg" alt="Producto">
+            </div>
+            <div class="thumbnail-images">
+                <img src="../images/products/juguete-perro.jpg" alt="Imagen 1" class="thumbnail active" onclick="changeMainImage(this.src)">
+                <img src="../images/products/juguete-perro.jpg" alt="Imagen 2" class="thumbnail" onclick="changeMainImage(this.src)">
+                <img src="../images/products/juguete-perro.jpg" alt="Imagen 3" class="thumbnail" onclick="changeMainImage(this.src)">
+            </div>
+        </div>
+        <div class="product-info">
+            <h1 id="product-name">Nombre del Producto</h1>
+            <div class="product-rating">
+                <span class="stars">★★★★☆</span>
+                <span class="reviews">(42 reseñas)</span>
+            </div>
+            <p class="product-price" id="product-price">$0.00 MXN</p>
+            <div class="product-description">
+                <h3>Descripción</h3>
+                <p>Este producto de alta calidad está diseñado específicamente para satisfacer las necesidades de tu mascota, garantizando su bienestar y felicidad. Elaborado con los mejores materiales y siguiendo estrictos estándares de calidad.</p>
+                
+                <h3>Características</h3>
+                <ul>
+                    <li>Alta calidad y durabilidad</li>
+                    <li>Materiales seguros para tu mascota</li>
+                    <li>Diseño ergonómico y cómodo</li>
+                    <li>Fácil de limpiar y mantener</li>
+                </ul>
+                
+                <h3>Beneficios</h3>
+                <ul>
+                    <li>Mejora la calidad de vida de tu mascota</li>
+                    <li>Promueve hábitos saludables</li>
+                    <li>Garantía de satisfacción</li>
+                </ul>
+            </div>
+            <div class="product-purchase">
+                <div class="quantity-selector">
+                    <label for="quantity">Cantidad:</label>
+                    <div class="quantity-controls">
+                        <button onclick="decreaseQuantity()">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button onclick="increaseQuantity()">+</button>
+                    </div>
+                </div>
+                <button class="btn-add-to-cart" onclick="addToCart()">Agregar al Carrito</button>
+                <button class="btn-buy-now" onclick="buyNow()">Comprar Ahora</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-extras">
+        <div class="product-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="showTab('details')">Detalles</button>
+                <button class="tab-btn" onclick="showTab('reviews')">Reseñas</button>
+                <button class="tab-btn" onclick="showTab('shipping')">Envío</button>
+            </div>
+            <div id="details" class="tab-content active">
+                <h3>Especificaciones</h3>
+                <table class="specifications">
+                    <tr>
+                        <td>Marca:</td>
+                        <td>ChungaPET</td>
+                    </tr>
+                    <tr>
+                        <td>Material:</td>
+                        <td>Premium</td>
+                    </tr>
+                    <tr>
+                        <td>Tamaño:</td>
+                        <td>Mediano</td>
+                    </tr>
+                    <tr>
+                        <td>Peso:</td>
+                        <td>0.8 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Origen:</td>
+                        <td>México</td>
+                    </tr>
+                </table>
+                <p>Este producto cuenta con garantía de 30 días por defectos de fabricación.</p>
+            </div>
+            <div id="reviews" class="tab-content">
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer">Laura G.</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">¡Excelente producto! Mi mascota lo adora y la calidad es inmejorable. Lo recomiendo ampliamente.</p>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer">Carlos M.</span>
+                        <span class="review-stars">★★★★☆</span>
+                    </div>
+                    <p class="review-text">Muy buen producto, aunque el tamaño es un poco más pequeño de lo que esperaba. Por lo demás, todo perfecto.</p>
+                </div>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer">Ana P.</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">Llegó antes de lo esperado y en perfectas condiciones. Mi gato está feliz con su nuevo juguete.</p>
+                </div>
+            </div>
+            <div id="shipping" class="tab-content">
+                <h3>Información de Envío</h3>
+                <p>Realizamos envíos a toda la República Mexicana.</p>
+                <ul>
+                    <li>Envío estándar: 3-5 días hábiles</li>
+                    <li>Envío express: 1-2 días hábiles (costo adicional)</li>
+                </ul>
+                <p>Los pedidos son procesados en un máximo de 24 horas después de confirmar el pago.</p>
+                <h3>Política de Devoluciones</h3>
+                <p>Aceptamos devoluciones dentro de los 15 días posteriores a la recepción del producto, siempre y cuando se encuentre en su empaque original y sin señales de uso.</p>
+            </div>
+        </div>
+
+        <div class="related-products">
+            <h3>Productos Relacionados</h3>
+            <div class="related-products-container">
+                <div class="related-product">
+                    <img src="../images/products/related1.jpg" alt="Producto Relacionado 1">
+                    <h4>Producto Relacionado 1</h4>
+                    <p class="related-price">$199.00 MXN</p>
+                </div>
+                <div class="related-product">
+                    <img src="../images/products/related2.jpg" alt="Producto Relacionado 2">
+                    <h4>Producto Relacionado 2</h4>
+                    <p class="related-price">$299.00 MXN</p>
+                </div>
+                <div class="related-product">
+                    <img src="../images/products/related3.jpg" alt="Producto Relacionado 3">
+                    <h4>Producto Relacionado 3</h4>
+                    <p class="related-price">$349.00 MXN</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de compra -->
+    <div id="purchase-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Completar Compra</h2>
+            <div class="purchase-summary">
+                <h3>Resumen de Compra</h3>
+                <div class="purchase-item">
+                    <span id="modal-product-name">Nombre del Producto</span>
+                    <span>x<span id="modal-quantity">1</span></span>
+                    <span id="modal-total-price">$0.00 MXN</span>
+                </div>
+                <div class="purchase-total">
+                    <span>Total:</span>
+                    <span id="modal-final-price">$0.00 MXN</span>
+                </div>
+            </div>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="customer-name">Nombre completo:</label>
+                    <input type="text" id="customer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-email">Correo electrónico:</label>
+                    <input type="email" id="customer-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Teléfono:</label>
+                    <input type="tel" id="customer-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">Dirección de envío:</label>
+                    <textarea id="customer-address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Método de pago:</label>
+                    <select id="payment-method" required>
+                        <option value="">Seleccionar método de pago</option>
+                        <option value="card">Tarjeta de crédito/débito</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="transfer">Transferencia bancaria</option>
+                    </select>
+                </div>
+                
+                <div id="card-details" class="payment-details">
+                    <div class="form-group">
+                        <label for="card-number">Número de tarjeta:</label>
+                        <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="card-expiry">Fecha de expiración:</label>
+                            <input type="text" id="card-expiry" placeholder="MM/AA">
+                        </div>
+                        <div class="form-group half">
+                            <label for="card-cvv">CVV:</label>
+                            <input type="text" id="card-cvv" placeholder="XXX">
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" class="btn-complete-purchase" onclick="completePurchase()">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content confirmation">
+            <span class="close-modal" onclick="closeConfirmationModal()">&times;</span>
+            <div class="confirmation-icon">✓</div>
+            <h2>¡Compra Realizada con Éxito!</h2>
+            <p>Gracias por tu compra. Hemos enviado un correo electrónico con los detalles de tu pedido.</p>
+            <p>Número de orden: <span id="order-number">CH-12345</span></p>
+            <button class="btn-back-to-shop" onclick="backToShop()">Volver a la Tienda</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 ChungaPET. Todos los derechos reservados.</p>
+        <img src="../images/footer.png" alt="Perrito en el footer">
+    </footer>
+
+    <script>
+        // Obtener parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        const productName = urlParams.get('name');
+        const productPrice = urlParams.get('price');
+        
+        // Cargar datos del producto
+        window.onload = function() {
+            if (productName) {
+                document.getElementById('product-name').textContent = productName;
+                document.title = "ChungaPET - " + productName;
+            }
+            
+            if (productPrice) {
+                document.getElementById('product-price').textContent = "$" + productPrice + ".00 MXN";
+            }
+            
+            // Aquí se podrían cargar más datos según el ID del producto
+        };
+        
+        // Cambiar imagen principal
+        function changeMainImage(src) {
+            document.getElementById('product-main-image').src = src;
+            
+            // Actualizar miniaturas activas
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                if (thumb.src === src) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+        
+        // Control de cantidad
+        function increaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            const currentValue = parseInt(quantityInput.value);
+            if (currentValue < 10) {
+                quantityInput.value = currentValue + 1;
+            }
+        }
+        
+        function decreaseQuantity() {
+            const quantityInput = document.getElementById('quantity');
+            const currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        }
+        
+        // Cambiar tabs
+        function showTab(tabId) {
+            // Ocultar todos los contenidos
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Mostrar el contenido seleccionado
+            document.getElementById(tabId).classList.add('active');
+            
+            // Actualizar botones
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            event.currentTarget.classList.add('active');
+        }
+        
+        // Funciones de compra
+        function addToCart() {
+            alert('Producto añadido al carrito correctamente');
+        }
+        
+        function buyNow() {
+            // Actualizar modal con información de compra
+            const quantity = document.getElementById('quantity').value;
+            const productName = document.getElementById('product-name').textContent;
+            const priceText = document.getElementById('product-price').textContent;
+            const price = parseFloat(priceText.replace('$', '').replace(' MXN', ''));
+            const totalPrice = price * quantity;
+            
+            document.getElementById('modal-product-name').textContent = productName;
+            document.getElementById('modal-quantity').textContent = quantity;
+            document.getElementById('modal-total-price').textContent = '$' + price.toFixed(2) + ' MXN';
+            document.getElementById('modal-final-price').textContent = '$' + totalPrice.toFixed(2) + ' MXN';
+            
+            // Mostrar modal
+            document.getElementById('purchase-modal').style.display = 'flex';
+        }
+        
+        function closeModal() {
+            document.getElementById('purchase-modal').style.display = 'none';
+        }
+        
+        function completePurchase() {
+            // Validar formulario
+            const form = document.getElementById('checkout-form');
+            if (form.checkValidity()) {
+                document.getElementById('purchase-modal').style.display = 'none';
+                
+                // Generar número de orden aleatorio
+                const orderNumber = 'CH-' + Math.floor(Math.random() * 90000 + 10000);
+                document.getElementById('order-number').textContent = orderNumber;
+                
+                // Mostrar confirmación
+                document.getElementById('confirmation-modal').style.display = 'flex';
+            } else {
+                alert('Por favor completa todos los campos requeridos');
+            }
+        }
+        
+        function closeConfirmationModal() {
+            document.getElementById('confirmation-modal').style.display = 'none';
+        }
+        
+        function backToShop() {
+            window.location.href = 'Products.html';
+        }
+        
+        // Mostrar/ocultar detalles de tarjeta según método de pago
+        document.getElementById('payment-method').addEventListener('change', function() {
+            const cardDetails = document.getElementById('card-details');
+            if (this.value === 'card') {
+                cardDetails.style.display = 'block';
+            } else {
+                cardDetails.style.display = 'none';
+            }
+        });
+        
+        // Cerrar modales al hacer clic fuera
+        window.onclick = function(event) {
+            const purchaseModal = document.getElementById('purchase-modal');
+            const confirmationModal = document.getElementById('confirmation-modal');
+            
+            if (event.target === purchaseModal) {
+                purchaseModal.style.display = 'none';
+            }
+            
+            if (event.target === confirmationModal) {
+                confirmationModal.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
